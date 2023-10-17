@@ -129,5 +129,13 @@ ubuntu@ip-172-31-35-62:~/aptos-core/aptos-move/move-examples/hello_blockchain$
 https://fullnode.devnet.aptoslabs.com/v1/accounts/f55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c/resource/0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c::message::MessageHolder
 
 
+
+
+
+# repeat message does not work1!
+https://fullnode.devnet.aptoslabs.com/v1/accounts/f55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c/events/0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c::message::MessageHolder/message_change_events
+
+[]
+
 {"type":"0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c::message::MessageHolder","data":{"message":"hello, blockchain","message_change_events":{"counter":"0","guid":{"id":{"addr":"0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c","creation_num":"4"}}}}}
 
