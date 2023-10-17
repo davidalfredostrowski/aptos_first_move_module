@@ -120,3 +120,14 @@ yes
 ubuntu@ip-172-31-35-62:~/aptos-core/aptos-move/move-examples/hello_blockchain$
 
 
+# this only works on 'default' if you are doing it the first time!
+* if you re-run you need to edit your Move.toml and add the address if you have a new one generated
+
+
+
+0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c
+https://fullnode.devnet.aptoslabs.com/v1/accounts/f55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c/resource/0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c::message::MessageHolder
+
+
+{"type":"0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c::message::MessageHolder","data":{"message":"hello, blockchain","message_change_events":{"counter":"0","guid":{"id":{"addr":"0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c","creation_num":"4"}}}}}
+
