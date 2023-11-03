@@ -158,6 +158,24 @@ Traceback (most recent call last):
     from typing_extensions import Protocol
 ModuleNotFoundError: No module named 'typing_extensions'
 ubuntu@ip-172-31-35-62:~/aptos-core/ecosystem/python/sdk$ pip install typing_extensions
+
+
+https://explorer.aptoslabs.com/
+
+https://explorer.aptoslabs.com/account/0cd38741e80d794772fc5890e39f2b9d2d3f28246489960b790d7b4d270ab6b5?network=devnet
+
+https://aptos.dev/tutorials/your-first-fungible-asset
+
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
+
+https://mokshya.io/
+
+
+
+
+
+
+
 Defaulting to user installation because normal site-packages is not writeable
 Requirement already satisfied: typing_extensions in /home/ubuntu/.local/lib/python3.10/site-packages (4.8.0)
 ubuntu@ip-172-31-35-62:~/aptos-core/ecosystem/python/sdk$
