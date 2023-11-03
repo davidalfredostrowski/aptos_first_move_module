@@ -24,64 +24,30 @@ Configuring for profile default
 Choose network from [devnet, testnet, mainnet, local, custom | defaults to devnet]
 <ret> for devnet
 
-
-
-
-
-
-
-cd ~/aptos-core/ecosystem/typescript/sdk/examples/typescript
-pnpm install
-
-
-
-
-
-
-
-   15  cd ~/aptos-core/ecosystem/typescript/sdk
-   16  pnpm install
-   17  cd examples/typescript
-   18  pnpm your_coin ~/aptos-core/aptos-move/move-examples/moon_coin
-   19  history
- aptos init
-Configuring for profile default
-Choose network from [devnet, testnet, mainnet, local, custom | defaults to devnet]
-devnet
+No network given, using devnet...
 Enter your private key as a hex literal (0x...) [Current: None | No input: Generate new key (or keep one if present)]
 
 No key given, generating key...
-Account 0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c doesn't exist, creating it and funding it with 100000000 Octas
-Account 0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c funded successfully
+Account 0xe23f4b065b6b99b6446f6dbc7f7020957fea5df4f9d74dc9b517c18a6b15a8c1 doesn't exist, creating it and funding it with 100000000 Octas
+Account 0xe23f4b065b6b99b6446f6dbc7f7020957fea5df4f9d74dc9b517c18a6b15a8c1 funded successfully
 
 ---
-Aptos CLI is now set up for account 0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c as profile default!  Run `aptos --help` for more information about commands
+Aptos CLI is now set up for account 0xe23f4b065b6b99b6446f6dbc7f7020957fea5df4f9d74dc9b517c18a6b15a8c1 as profile default!  Run `aptos --help` for more information about commands
 {
   "Result": "Success"
 }
 
 
-ubuntu@ip-172-31-35-62:~$ aptos init
-Configuring for profile default
-Choose network from [devnet, testnet, mainnet, local, custom | defaults to devnet]
-devnet
-Enter your private key as a hex literal (0x...) [Current: None | No input: Generate new key (or keep one if present)]
-
-No key given, generating key...
-Account 0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c doesn't exist, creating it and funding it with 100000000 Octas
-Account 0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c funded successfully
-
----
-Aptos CLI is now set up for account 0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c as profile default!  Run `aptos --help` for more information about commands
+ /home/ubuntu/.local/bin/aptos account fund-with-faucet --account default
 {
-  "Result": "Success"
+  "Result": "Added 100000000 Octas to account 0xe23f4b065b6b99b6446f6dbc7f7020957fea5df4f9d74dc9b517c18a6b15a8c1"
 }
-ubuntu@ip-172-31-35-62:~$ aptos account fund-with-faucet --account default
-{
-  "Result": "Added 100000000 Octas to account 0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c"
-}
-ubuntu@ip-172-31-35-62:~$ cd aptos-core/aptos-move/move-examples/hello_blockchain
-ubuntu@ip-172-31-35-62:~/aptos-core/aptos-move/move-examples/hello_blockchain$ aptos move compile --named-addresses hello_blockchain=default
+ubuntu@ip-172-31-34-79:~$
+
+
+cd aptos-core/aptos-move/move-examples/hello_blockchain
+
+ /home/ubuntu/.local/bin/aptos move compile --named-addresses hello_blockchain=default
 Compiling, may take a little while to download git dependencies...
 INCLUDING DEPENDENCY AptosFramework
 INCLUDING DEPENDENCY AptosStdlib
@@ -89,65 +55,71 @@ INCLUDING DEPENDENCY MoveStdlib
 BUILDING Examples
 {
   "Result": [
-    "f55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c::message"
+    "e23f4b065b6b99b6446f6dbc7f7020957fea5df4f9d74dc9b517c18a6b15a8c1::message"
   ]
 }
-ubuntu@ip-172-31-35-62:~/aptos-core/aptos-move/move-examples/hello_blockchain$ aptos move test --named-addresses hello_blockchain=default
+
+
+ubuntu@ip-172-31-34-79:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move test --named-addresses hello_blockchain=default
 INCLUDING DEPENDENCY AptosFramework
 INCLUDING DEPENDENCY AptosStdlib
 INCLUDING DEPENDENCY MoveStdlib
 BUILDING Examples
 Running Move unit tests
-[ PASS    ] 0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c::message::sender_can_set_message
-[ PASS    ] 0xf55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c::message_tests::sender_can_set_message
+[ PASS    ] 0xe23f4b065b6b99b6446f6dbc7f7020957fea5df4f9d74dc9b517c18a6b15a8c1::message_tests::sender_can_set_message
+[ PASS    ] 0xe23f4b065b6b99b6446f6dbc7f7020957fea5df4f9d74dc9b517c18a6b15a8c1::message::sender_can_set_message
 Test result: OK. Total tests: 2; passed: 2; failed: 0
 {
   "Result": "Success"
 }
-ubuntu@ip-172-31-35-62:~/aptos-core/aptos-move/move-examples/hello_blockchain$ aptos move publish --named-addresses hello_blockchain=default
+
+
+ubuntu@ip-172-31-34-79:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move publish --named-addresses hello_blockchain=default
 Compiling, may take a little while to download git dependencies...
 INCLUDING DEPENDENCY AptosFramework
 INCLUDING DEPENDENCY AptosStdlib
 INCLUDING DEPENDENCY MoveStdlib
 BUILDING Examples
-package size 1755 bytes
-Do you want to submit a transaction for a range of [139800 - 209700] Octas at a gas unit price of 100 Octas? [yes/no] >
+package size 1806 bytes
+Do you want to submit a transaction for a range of [143400 - 215100] Octas at a gas unit price of 100 Octas? [yes/no] >
 yes
 {
   "Result": {
-    "transaction_hash": "0x4a1c9defdb403a492c43f61b7f971a89c4bf2a84442c048dd6c893cb973ec8c8",
-    "gas_used": 1398,
+    "transaction_hash": "0x983fa4bdf862ac290859501a0488560b2f496cff96a2c7fbd0498d1c7a9f147f",
+    "gas_used": 1434,
     "gas_unit_price": 100,
-    "sender": "f55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c",
+    "sender": "e23f4b065b6b99b6446f6dbc7f7020957fea5df4f9d74dc9b517c18a6b15a8c1",
     "sequence_number": 0,
     "success": true,
-    "timestamp_us": 1697560175003086,
-    "version": 2319616,
+    "timestamp_us": 1699052941625221,
+    "version": 36099,
     "vm_status": "Executed successfully"
   }
 }
-ubuntu@ip-172-31-35-62:~/aptos-core/aptos-move/move-examples/hello_blockchain$ aptos move run \
+
+
+
+ubuntu@ip-172-31-34-79:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move run \
   --function-id 'default::message::set_message' \
   --args 'string:hello, blockchain'
 Do you want to submit a transaction for a range of [50300 - 75400] Octas at a gas unit price of 100 Octas? [yes/no] >
 yes
 {
   "Result": {
-    "transaction_hash": "0xb0d9323ce5d5b17d52dc4739d101ba6f167971f5a0d2aa2cef884abfe254089c",
+    "transaction_hash": "0x8e36a23d42ffeb791a02f8ffb538aee07e262d02146f2d27b91284d434faae49",
     "gas_used": 504,
     "gas_unit_price": 100,
-    "sender": "f55cd6df0a44ae71196a932b6b1f9dea475de17e09d891fac75b22ac80a9318c",
+    "sender": "e23f4b065b6b99b6446f6dbc7f7020957fea5df4f9d74dc9b517c18a6b15a8c1",
     "sequence_number": 1,
     "success": true,
-    "timestamp_us": 1697560196412481,
-    "version": 2319765,
+    "timestamp_us": 1699053066448297,
+    "version": 36934,
     "vm_status": "Executed successfully"
   }
 }
-ubuntu@ip-172-31-35-62:~/aptos-core/aptos-move/move-examples/hello_blockchain$
 
 
-# this only works on 'default' if you are doing it the first time!
+ first time!
 * if you re-run you need to edit your Move.toml and add the address if you have a new one generated
 
 
