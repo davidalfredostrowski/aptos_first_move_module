@@ -19,6 +19,16 @@ curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
 #NOTE: fullly qualify path for aptos via environemnt varible or in command line!
 
 #/home/ubuntu/.local/bin/aptos
+/home/ubuntu/.local/bin/aptos init
+Configuring for profile default
+Choose network from [devnet, testnet, mainnet, local, custom | defaults to devnet]
+<ret> for devnet
+
+
+
+
+
+
 
 cd ~/aptos-core/ecosystem/typescript/sdk/examples/typescript
 pnpm install
